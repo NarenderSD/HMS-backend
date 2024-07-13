@@ -1,6 +1,9 @@
 import express from 'express';
-const port = 4000;
 const app = express();
+const port = process.env.PORT || 4000;
+
+
+app.use(express.json());
 app.listen(port, () => {
     console.log(`Server is running on port http://localhost${port}`);
 });
